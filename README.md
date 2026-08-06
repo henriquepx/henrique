@@ -1,3 +1,14 @@
-# henrique
+# Henrique Pinheiro
 
-[![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-mawz8hbk)
+My personal portfolio built with Next.js, TypeScript, Tailwind CSS and Framer Motion.
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+## Live Demo
+
+https://henrique-kappa.vercel.app/
