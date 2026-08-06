@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Exact requested light palette */
+    --bg: #fafafa;
+    --card: #ffffff;
+    --text: #111111;
+    --text-secondary: #666666;
+    --border: #eaeaea;
+
+    /* shadcn-compatible HSL mapping */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 6.7%;
+    --card-h: 0 0% 100%;
+    --card-foreground: 0 0% 6.7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6.7%;
+    --primary: 0 0% 6.7%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 6.7%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 6.7%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border-h: 0 0% 91.8%;
+    --input: 0 0% 91.8%;
+    --ring: 0 0% 6.7%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Exact requested dark palette */
+    --bg: #0e0e0e;
+    --card: #151515;
+    --text: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border: #2a2a2a;
+
+    --background: 0 0% 5.5%;
+    --foreground: 0 0% 100%;
+    --card-h: 0 0% 8.2%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 8.2%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 5.5%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border-h: 0 0% 16.5%;
+    --input: 0 0% 16.5%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+  }
+  ::selection {
+    background-color: var(--text);
+    color: var(--bg);
+  }
+}
+
+@layer utilities {
+  .text-secondary-custom {
+    color: var(--text-secondary);
+  }
+  .bg-card-custom {
+    background-color: var(--card);
+  }
+  .border-custom {
+    border-color: var(--border);
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+  .tracking-tightest {
+    letter-spacing: -0.04em;
+  }
+
+  /* Subtle ambient gradient — sits behind everything, not animated */
+  .ambient-gradient {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        ellipse 70% 50% at 50% -10%,
+        rgba(120, 120, 120, 0.06),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 100% 100%,
+        rgba(120, 120, 120, 0.04),
+        transparent 60%
+      );
+  }
+
+  /* Mouse-following glow orb */
+  .glow-orb {
+    position: absolute;
+    top: -300px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(130, 130, 130, 0.07) 0%,
+      transparent 65%
+    );
+    will-change: transform;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.025;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
