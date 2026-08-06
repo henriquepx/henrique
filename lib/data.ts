@@ -5,7 +5,6 @@ export type Project = {
   description: string;
   technologies: string[];
   liveUrl: string;
-  githubUrl: string;
   image: string;
   accent: string;
   layout: 'landscape' | 'portrait' | 'fullwidth';
@@ -14,19 +13,18 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'nutritionist',
-    name: 'Nutritionist Website',
-    category: 'Website',
+    id: 'Nutricionista',
+    name: 'Landing page para Nutricionista',
+    category: 'Landing page',
     description:
-      'A polished marketing site for a clinical nutritionist, featuring booking flows, program overviews and editorial content management.',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+      'Uma landing page para nutricionista, com design moderno e responsivo, destacando os serviços oferecidos e facilitando o contato com potenciais clientes.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: 'https://barbaranutri.vercel.app',
     image:
-      'https://images.pexels.com/photos/15319038/pexels-photo-15319038.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      '/barbaraproject.png',
     accent: 'A wellness platform for clinical nutrition.',
     layout: 'landscape',
-    year: '2024',
+    year: '2026',
   },
   {
     id: 'law-firm',
@@ -36,7 +34,6 @@ export const projects: Project[] = [
       'An authoritative digital presence for a boutique law firm, balancing trust, clarity and refined typography across practice areas.',
     technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
     liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
     image:
       'https://images.pexels.com/photos/34133564/pexels-photo-34133564.jpeg?auto=compress&cs=tinysrgb&w=1200',
     accent: 'A refined digital presence for a boutique firm.',
@@ -51,7 +48,6 @@ export const projects: Project[] = [
       'A SaaS platform in development combining AI workflows with a clean, opinionated interface for teams that value speed and focus.',
     technologies: ['Next.js', 'TypeScript', 'AI', 'Tailwind CSS'],
     liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
     image:
       'https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg?auto=compress&cs=tinysrgb&w=1600',
     accent: 'An AI-powered workspace for focused teams.',
@@ -68,26 +64,44 @@ export type SkillCategory = {
   skills: Skill[];
 };
 
-export const skillCategories: SkillCategory[] = [
+export const skillCategories = [
   {
     title: 'Frontend',
     index: '01',
-    skills: [{ name: 'React' }, { name: 'Next.js' }, { name: 'TypeScript' }],
+    skills: [
+      { name: 'React' },
+      { name: 'React Native' },
+      { name: 'Next.js' },
+      { name: 'TypeScript' },
+      { name: 'JavaScript' },
+      { name: 'Node.js' },
+    ],
   },
   {
-    title: 'Styling',
+    title: 'Estilização',
     index: '02',
-    skills: [{ name: 'Tailwind CSS' }],
+    skills: [
+      { name: 'Tailwind CSS' },
+      { name: 'CSS' },
+      { name: 'Sass' },
+      { name: 'Bootstrap' },
+      { name: 'Styled Components' },
+    ],
   },
   {
-    title: 'Tools',
+    title: 'Ferramentas',
     index: '03',
-    skills: [{ name: 'Git' }, { name: 'Vercel' }],
+    skills: [
+      { name: 'Git' },
+      { name: 'IA' },
+    ],
   },
   {
-    title: 'Learning',
+    title: 'Aprendendo',
     index: '04',
-    skills: [{ name: 'Go', note: 'Currently exploring' }],
+    skills: [
+      { name: 'Go', note: 'Estudando atualmente' },
+    ],
   },
 ];
 
@@ -98,9 +112,9 @@ export type Social = {
 };
 
 export const socials: Social[] = [
-  { label: 'GitHub', href: 'https://github.com', external: true },
-  { label: 'LinkedIn', href: 'https://linkedin.com', external: true },
-  { label: 'Instagram', href: 'https://instagram.com', external: true },
-  { label: 'Email', href: 'mailto:hello@henriquepinheiro.dev', external: false },
-  { label: 'WhatsApp', href: 'https://wa.me/000000000', external: true },
+  { label: 'GitHub', href: 'https://github.com/henriquepx', external: true },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/henriquepinheiroxavier', external: true },
+  { label: 'Instagram', href: 'https://www.instagram.com/henriquepxx/', external: true },
+  { label: 'Email', href: 'mailto:henriquepinheiroxavier@gmail.com', external: false },
+  { label: 'WhatsApp', href: 'https://wa.me/5521964823939', external: true },
 ];

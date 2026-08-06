@@ -13,7 +13,7 @@ export function Footer() {
         className="mx-auto max-w-6xl border-t border-custom pt-8"
       >
         <p className="text-sm text-secondary-custom">
-          Designed &amp; Developed by Henrique Pinheiro
+          Henrique Pinheiro - {new Date().getFullYear()}. © Todos os direitos reservados.
         </p>
       </motion.div>
     </footer>

@@ -24,12 +24,12 @@ export function Contact() {
     <section id="contact" className="px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-4xl">
         <ScrollReveal className="mb-14">
-          <p className="eyebrow mb-4">Contact</p>
+          <p className="eyebrow mb-4">Contato</p>
           <h2 className="text-4xl font-bold tracking-tightest sm:text-6xl sm:leading-[1.02]">
-            Let&apos;s work together.
+            Vamos trabalhar juntos.
           </h2>
           <p className="mt-5 max-w-md text-lg text-secondary-custom">
-            Available for freelance projects and collaborations.
+            Disponível para projetos freelance e colaborações.
           </p>
         </ScrollReveal>
 

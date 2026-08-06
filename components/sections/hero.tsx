@@ -34,6 +34,7 @@ export function Hero() {
       style={{ y, opacity }}
       className="relative px-6 pt-36 pb-24 sm:pt-48 sm:pb-32"
     >
+       <div className="mx-auto flex max-w-7xl flex-col items-center text-center">
       <div className="mx-auto max-w-4xl">
         <motion.p
           custom={0}
@@ -42,7 +43,7 @@ export function Hero() {
           variants={fadeUp}
           className="eyebrow mb-8"
         >
-          Front-end Developer
+          Desenvolvedor Front-end
         </motion.p>
 
         <div className="overflow-hidden">
@@ -51,7 +52,7 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-5xl font-bold leading-[1.05] tracking-tightest sm:text-7xl sm:leading-[1.02]"
+            className="text-center text-5xl font-bold leading-[1.05] tracking-tightest sm:text-7xl sm:leading-[1.02]"
           >
             Henrique Pinheiro
           </motion.h1>
@@ -62,10 +63,10 @@ export function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="mt-6 max-w-xl text-lg text-secondary-custom sm:text-xl"
+          className="mt-6 max-w-2xl text-center text-lg text-secondary-custom sm:text-xl"
           style={{ lineHeight: 1.6 }}
         >
-          Building premium websites, SaaS and AI-powered products.
+          Crio interfaces modernas, rápidas e intuitivas para empresas, startups e negócios digitais.
         </motion.p>
 
         <motion.div
@@ -73,13 +74,13 @@ export function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="mt-10 flex flex-wrap items-center gap-3"
+          className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
           <MagneticButton
             href="#work"
             className="group inline-flex h-11 items-center gap-2 rounded-full bg-[var(--text)] px-6 text-sm font-medium text-[var(--bg)]"
           >
-            View Projects
+            Projetos
             <ArrowRight
               className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
               strokeWidth={1.5}
@@ -90,7 +91,7 @@ export function Hero() {
             strength={0.25}
             className="group inline-flex h-11 items-center gap-2 rounded-full border border-custom px-6 text-sm font-medium transition-colors duration-200 hover:bg-[var(--card)]"
           >
-            Contact
+              Contato
             <ArrowUpRight
               className="h-4 w-4 text-secondary-custom transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               strokeWidth={1.5}
@@ -103,9 +104,9 @@ export function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="mt-12 flex items-center gap-3"
+          className="mt-12 flex flex-wrap items-center justify-center gap-3"
         >
-          {['React', 'Next.js', 'SaaS', 'AI'].map((t, i) => (
+          {['React', 'Next.js', 'Typescript', 'Node.js'].map((t, i) => (
             <span key={t} className="flex items-center gap-3">
               {i > 0 && <span className="text-secondary-custom">•</span>}
               <motion.span
@@ -137,7 +138,8 @@ export function Hero() {
           </span>
           <div className="h-8 w-px bg-gradient-to-b from-[var(--border)] to-transparent" />
         </motion.div>
-      </motion.div>
+        </motion.div>
+        </div>
     </motion.section>
   );
 }

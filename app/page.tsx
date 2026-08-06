@@ -20,13 +20,13 @@ export default function Home() {
         <Nav />
         <main>
           <Hero />
-          <SectionDivider label="Work" />
+          <SectionDivider label="Trabalhos" />
           <SelectedWork />
-          <SectionDivider label="About" />
+          <SectionDivider label="Sobre" />
           <About />
-          <SectionDivider label="Skills" />
+          <SectionDivider label="Habilidades" />
           <TechStack />
-          <SectionDivider label="Contact" />
+          <SectionDivider label="Contato" />
           <Contact />
         </main>
         <Footer />

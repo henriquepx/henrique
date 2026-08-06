@@ -13,12 +13,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://henriquepinheiro.dev'),
   title: {
     default: 'Henrique Pinheiro — Front-end Developer',
-    template: '%s — Henrique Pinheiro',
+    template: 'Henrique Pinheiro',
   },
   description:
-    'Front-end developer building premium websites, SaaS and AI-powered products with React, Next.js and TypeScript.',
+    'Desenvolvedor Front-end que cria interfaces modernas, rápidas e intuitivas para empresas, startups e negócios digitais.',
   keywords: [
     'Front-end Developer',
+    'Desenvolvedor Front-end',
     'React',
     'Next.js',
     'TypeScript',
@@ -31,18 +32,18 @@ export const metadata: Metadata = {
   creator: 'Henrique Pinheiro',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'pt-BR',
     url: 'https://henriquepinheiro.dev',
     siteName: 'Henrique Pinheiro',
-    title: 'Henrique Pinheiro — Front-end Developer',
+    title: 'Henrique Pinheiro — Desenvolvedor Front-end',
     description:
-      'Building premium websites, SaaS and AI-powered products with React, Next.js and TypeScript.',
+      'Desenvolvedor Front-end que cria interfaces modernas, rápidas e intuitivas para empresas, startups e negócios digitais.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Henrique Pinheiro — Front-end Developer',
+    title: 'Henrique Pinheiro — Desenvolvedor Front-end',
     description:
-      'Building premium websites, SaaS and AI-powered products with React, Next.js and TypeScript.',
+      'Desenvolvedor Front-end que cria interfaces modernas, rápidas e intuitivas para empresas, startups e negócios digitais.',
   },
   robots: {
     index: true,
@@ -59,14 +60,14 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Henrique Pinheiro',
-    jobTitle: 'Front-end Developer',
+    jobTitle: 'Desenvolvedor Front-end',
     description:
-      'Building premium websites, SaaS and AI-powered products with React, Next.js and TypeScript.',
+      'Desenvolvedor Front-end que cria interfaces modernas, rápidas e intuitivas para empresas, startups e negócios digitais.',
     knowsAbout: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'SaaS', 'AI'],
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         <script
           type="application/ld+json"

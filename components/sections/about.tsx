@@ -7,13 +7,8 @@ import { useMounted } from '@/hooks/use-mounted';
 type Word = { text: string; emphasis?: boolean };
 
 const WORDS: Word[] = [
-  { text: 'I build modern digital experiences focused on ' },
-  { text: 'quality', emphasis: true },
-  { text: ', ' },
-  { text: 'performance', emphasis: true },
-  { text: ' and ' },
-  { text: 'simplicity', emphasis: true },
-  { text: '.' },
+  { text: 'Acredito que um bom produto digital vai além de um visual bonito. Busco desenvolver experiências' },
+  { text: 'intuitivas, rápidas e bem construídas.', emphasis: true },
 ];
 
 export function About() {
@@ -34,7 +29,7 @@ export function About() {
           transition={{ duration: 0.5 }}
           className="eyebrow mb-8"
         >
-          About
+          Sobre
         </motion.p>
 
         <p className="flex flex-wrap text-2xl font-medium leading-[1.4] tracking-tightest sm:text-4xl sm:leading-[1.3]">

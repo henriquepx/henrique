@@ -184,15 +184,6 @@ function ActionLinks({
           strokeWidth={1.5}
         />
       </Link>
-      <Link
-        href={project.githubUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-secondary-custom transition-colors hover:text-[var(--text)]"
-      >
-        <Github className="h-4 w-4" strokeWidth={1.5} />
-        GitHub
-      </Link>
     </motion.div>
   );
 }

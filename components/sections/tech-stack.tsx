@@ -18,11 +18,10 @@ export function TechStack() {
     <section id="skills" className="px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <ScrollReveal className="mb-16 max-w-2xl">
-          <p className="eyebrow mb-4">Capabilities</p>
+          <p className="eyebrow mb-4">Stacks</p>
           <h2 className="text-3xl font-bold tracking-tightest sm:text-5xl sm:leading-[1.05]">
-            A toolkit chosen for
-            <br />
-            <span className="text-secondary-custom">craft and clarity.</span>
+            Linguagens de programação &
+            <span className="text-secondary-custom"> ferramentas.</span>
           </h2>
         </ScrollReveal>
 
@@ -62,9 +61,7 @@ export function TechStack() {
             className="flex items-end lg:col-span-5"
           >
             <p className="text-sm leading-relaxed text-secondary-custom">
-              Every tool above is chosen deliberately — never for novelty.
-              The stack stays small, modern and fast, so the work stays
-              focused on what matters: the experience.
+               Cada tecnologia foi escolhida com propósito. Utilizo uma stack moderna e eficiente para desenvolver produtos rápidos, escaláveis e focados na melhor experiência do usuário.
             </p>
           </motion.div>
         </div>
