@@ -8,6 +8,7 @@ import { Footer } from '@/components/sections/footer';
 import { Loader } from '@/components/motion/loader';
 import { MouseGlow } from '@/components/motion/mouse-glow';
 import { SectionDivider } from '@/components/motion/section-divider';
+import { SpotifyFloatingButton } from "@/components/spotify-floating-button";
 
 export default function Home() {
   return (
@@ -28,6 +29,8 @@ export default function Home() {
           <TechStack />
           <SectionDivider label="Contato" />
           <Contact />
+
+          <SpotifyFloatingButton />
         </main>
         <Footer />
       </div>

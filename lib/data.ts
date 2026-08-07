@@ -23,37 +23,37 @@ export const projects: Project[] = [
     image:
       '/barbaraproject.png',
     accent: 'A wellness platform for clinical nutrition.',
-    layout: 'landscape',
+    layout: 'fullwidth',
     year: '2026',
   },
   {
-    id: 'law-firm',
-    name: 'Law Firm Website',
-    category: 'Website',
+    id: 'future-saas',
+    name: 'GitBoard',
+    category: 'Ferramenta',
     description:
-      'An authoritative digital presence for a boutique law firm, balancing trust, clarity and refined typography across practice areas.',
-    technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
-    liveUrl: 'https://example.com',
+      'Uma plataforma desenvolvida para centralizar os principais comandos do Git, dúvidas frequentes e situações comuns do dia a dia. Encontre rapidamente o comando certo com uma interface simples, organizada e intuitiva.',
+    technologies: ['Next.js', 'shadcn/ui:', 'Tailwind CSS'],
+    liveUrl: 'https://gittutorialboard.vercel.app/',
     image:
-      'https://images.pexels.com/photos/34133564/pexels-photo-34133564.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    accent: 'A refined digital presence for a boutique firm.',
-    layout: 'portrait',
+      '/gittutorial.png',
+    accent: 'Uma ferramenta leve, organizada e responsiva que ajuda desenvolvedores a encontrar rapidamente o comando certo, entender sua função e continuar programando sem perder tempo.',
+    layout: 'landscape',
     year: '2024',
   },
   {
-    id: 'future-saas',
-    name: 'Future SaaS',
-    category: 'Product',
+    id: 'financialtools',
+    name: 'Quantia',
+    category: 'Future SaaS',
     description:
-      'A SaaS platform in development combining AI workflows with a clean, opinionated interface for teams that value speed and focus.',
-    technologies: ['Next.js', 'TypeScript', 'AI', 'Tailwind CSS'],
-    liveUrl: 'https://example.com',
+      'Uma plataforma com ferramentas financeiras, incluindo calculadoras de investimento, simuladores de empréstimos e recursos educacionais para ajudar os usuários a tomar decisões financeiras informadas.',
+    technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
+    liveUrl: 'https://quantia-ten.vercel.app/',
     image:
-      'https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    accent: 'An AI-powered workspace for focused teams.',
+      '/quantia.png',
+    accent: 'Plataforma de ferramentas financeiras.',
     layout: 'fullwidth',
-    year: '2025',
-  },
+    year: '2026',
+  }
 ];
 
 export type Skill = { name: string; note?: string };
