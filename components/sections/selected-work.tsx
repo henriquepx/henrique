@@ -16,13 +16,13 @@ export function SelectedWork() {
       <div className="mx-auto max-w-6xl">
         <ScrollReveal className="mb-20 flex items-end justify-between gap-6 sm:mb-28">
           <div>
-            <p className="eyebrow mb-4">Selected Work</p>
+            <p className="eyebrow mb-4">Trabalhos</p>
             <h2 className="text-3xl font-bold tracking-tightest sm:text-5xl sm:leading-[1.05]">
-              Case studies
+              Projetos
             </h2>
           </div>
           <p className="hidden max-w-xs text-right text-sm text-secondary-custom sm:block">
-            Three projects, each with its own story and craft.
+            Cada projeto com a sua própria história, desafios e soluções. Clique em cada um para saber mais.
           </p>
         </ScrollReveal>
 

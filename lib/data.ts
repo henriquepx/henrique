@@ -37,7 +37,7 @@ export const projects: Project[] = [
     image:
       '/gittutorial.png',
     accent: 'Uma ferramenta leve, organizada e responsiva que ajuda desenvolvedores a encontrar rapidamente o comando certo, entender sua função e continuar programando sem perder tempo.',
-    layout: 'landscape',
+    layout: 'portrait',
     year: '2024',
   },
   {
@@ -89,18 +89,33 @@ export const skillCategories = [
     ],
   },
   {
-    title: 'Ferramentas',
+    title: 'Backend & Banco de Dados',
     index: '03',
     skills: [
-      { name: 'Git' },
-      { name: 'IA' },
+      { name: 'Node.js' },
+      { name: 'MongoDB' }
     ],
   },
   {
-    title: 'Aprendendo',
+    title: 'Bibliotecas e Frameworks',
+    index: '05',
+    skills: [
+      { name: 'Zod' },
+      { name: 'Redux' },
+      { name: 'Zustand' },
+      { name: 'Jest' },
+      { name: 'Prisma' },
+      { name: 'Framer Motion' },
+      { name: 'shadcn/ui' },
+      { name: 'React Hook Form' },
+    ],
+  },
+  {
+    title: 'Ferramentas',
     index: '04',
     skills: [
-      { name: 'Go', note: 'Estudando atualmente' },
+      { name: 'Git' },
+      { name: 'IA' },
     ],
   },
 ];
@@ -112,9 +127,9 @@ export type Social = {
 };
 
 export const socials: Social[] = [
-  { label: 'GitHub', href: 'https://github.com/henriquepx', external: true },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/henriquepinheiroxavier', external: true },
-  { label: 'Instagram', href: 'https://www.instagram.com/henriquepxx/', external: true },
-  { label: 'Email', href: 'mailto:henriquepinheiroxavier@gmail.com', external: false },
   { label: 'WhatsApp', href: 'https://wa.me/5521964823939', external: true },
+  { label: 'Email', href: 'mailto:henriquepinheiroxavier@gmail.com', external: false },
+  { label: 'Instagram', href: 'https://www.instagram.com/henriquepxx/', external: true },
+  { label: 'GitHub', href: 'https://github.com/henriquepx', external: true },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/henriquepinheiroxavier', external: true }
 ];

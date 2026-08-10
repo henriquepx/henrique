@@ -26,10 +26,10 @@ export function Contact() {
         <ScrollReveal className="mb-14">
           <p className="eyebrow mb-4">Contato</p>
           <h2 className="text-4xl font-bold tracking-tightest sm:text-6xl sm:leading-[1.02]">
-            Vamos trabalhar juntos.
+            Vamos trabalhar juntos?
           </h2>
           <p className="mt-5 max-w-md text-lg text-secondary-custom">
-            Disponível para projetos freelance e colaborações.
+            Disponível para projetos freelance e colaborações. Envie uma mensagem!
           </p>
         </ScrollReveal>
 

@@ -33,7 +33,7 @@ export function SpotifyFloatingButton() {
           animate={{ opacity: 1, x: 0, y: 0 }}
           exit={{ opacity: 0, x: -20, y: 20 }}
           transition={{ duration: 0.35 }}
-          className="group fixed bottom-6 left-6 z-50"
+          className="group fixed bottom-16 left-8 z-50"
         >
           {/* Botão */}
           <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-zinc-900/80 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:border-[#1DB954]/50">
