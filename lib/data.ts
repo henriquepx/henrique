@@ -41,16 +41,16 @@ export const projects: Project[] = [
     year: '2026',
   },
   {
-    id: 'eduardo-links',
-    name: 'Eduardo Bonfim',
+    id: 'bernardo-links',
+    name: 'Bernardo Bonfim',
     category: 'Links-in-bio',
     description:
-      'Estrutura de links-in-bio moderna e responsiva para Eduardo Bonfim, destacando sua identidade visual e seus links e facilitando o contato com potenciais clientes.',
+      'Estrutura de links-in-bio moderna e responsiva para Bernardo Bonfim, destacando sua identidade visual e seus links e facilitando o contato com potenciais clientes.',
     technologies: ['React', 'Tailwind CSS', 'Vercel'],
     liveUrl: 'https://bernardobonfim.vercel.app',
     image:
       '/eduardo.png',
-    accent: 'Landing page moderna e responsiva para Eduardo Bonfim, destacando seus links e facilitando o contato com potenciais clientes.',
+    accent: 'Landing page moderna e responsiva para Bernardo Bonfim, destacando seus links e facilitando o contato com potenciais clientes.',
     layout: 'fullwidth',
     year: '2026',
   },
