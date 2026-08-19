@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { useLanguage } from '@/lib/i18n';
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const { locale, setLocale, t } = useLanguage();
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
@@ -36,9 +38,9 @@ export function Nav() {
 
         <nav className="hidden items-center gap-8 sm:flex">
           {[
-            { label: 'Work', href: '#work' },
-            { label: 'Skills', href: '#skills' },
-            { label: 'Contact', href: '#contact' },
+            { label: t.nav.work, href: '#work' },
+            { label: t.nav.skills, href: '#skills' },
+            { label: t.nav.contact, href: '#contact' },
           ].map((item) => (
             <Link
               key={item.href}
@@ -51,7 +53,17 @@ export function Nav() {
           ))}
         </nav>
 
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setLocale(locale === 'pt-BR' ? 'en' : 'pt-BR')}
+            aria-label={locale === 'pt-BR' ? 'Switch to English' : 'Mudar para português'}
+            className="flex h-8 min-w-8 items-center justify-center rounded-full border border-custom px-2 text-[10px] font-medium uppercase tracking-[0.12em] text-secondary-custom transition-colors duration-200 hover:border-[var(--text)]/30 hover:text-[var(--text)]"
+          >
+            {locale === 'pt-BR' ? 'EN' : 'PT'}
+          </button>
+          <ThemeToggle />
+        </div>
       </div>
     </motion.header>
   );

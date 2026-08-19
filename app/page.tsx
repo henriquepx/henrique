@@ -1,3 +1,5 @@
+'use client';
+
 import { Nav } from '@/components/sections/nav';
 import { Hero } from '@/components/sections/hero';
 import { SelectedWork } from '@/components/sections/selected-work';
@@ -9,8 +11,11 @@ import { Loader } from '@/components/motion/loader';
 import { MouseGlow } from '@/components/motion/mouse-glow';
 import { SectionDivider } from '@/components/motion/section-divider';
 import { SpotifyFloatingButton } from "@/components/spotify-floating-button";
+import { useLanguage } from '@/lib/i18n';
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <>
       <Loader />
@@ -21,13 +26,13 @@ export default function Home() {
         <Nav />
         <main>
           <Hero />
-          <SectionDivider label="Trabalhos" />
+          <SectionDivider label={t.divider.work} />
           <SelectedWork />
-          <SectionDivider label="Sobre" />
+          <SectionDivider label={t.divider.about} />
           <About />
-          <SectionDivider label="Habilidades" />
+          <SectionDivider label={t.divider.skills} />
           <TechStack />
-          <SectionDivider label="Contato" />
+          <SectionDivider label={t.divider.contact} />
           <Contact />
 
           <SpotifyFloatingButton />

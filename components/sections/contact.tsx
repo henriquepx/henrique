@@ -8,10 +8,12 @@ import { useScroll, useTransform } from 'framer-motion';
 import { socials } from '@/lib/data';
 import { ScrollReveal } from '@/components/motion/scroll-reveal';
 import { useMounted } from '@/hooks/use-mounted';
+import { useLanguage } from '@/lib/i18n';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function Contact() {
+  const { t } = useLanguage();
   const mounted = useMounted();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -24,12 +26,12 @@ export function Contact() {
     <section id="contact" className="px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-4xl">
         <ScrollReveal className="mb-14">
-          <p className="eyebrow mb-4">Contato</p>
+          <p className="eyebrow mb-4">{t.contact.eyebrow}</p>
           <h2 className="text-4xl font-bold tracking-tightest sm:text-6xl sm:leading-[1.02]">
-            Vamos trabalhar juntos?
+            {t.contact.title}
           </h2>
           <p className="mt-5 max-w-md text-lg text-secondary-custom">
-            Disponível para projetos freelance e colaborações. Envie uma mensagem!
+            {t.contact.description}
           </p>
         </ScrollReveal>
 

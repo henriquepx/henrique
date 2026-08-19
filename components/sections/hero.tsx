@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { MagneticButton } from '@/components/motion/magnetic-button';
 import { useMounted } from '@/hooks/use-mounted';
+import { useLanguage } from '@/lib/i18n';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -19,6 +20,7 @@ const fadeUp = {
 };
 
 export function Hero() {
+  const { t } = useLanguage();
   const mounted = useMounted();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -43,7 +45,7 @@ export function Hero() {
           variants={fadeUp}
           className="eyebrow mb-8"
         >
-          Desenvolvedor Front-end
+          {t.hero.eyebrow}
         </motion.p>
 
         <div className="overflow-hidden">
@@ -66,7 +68,7 @@ export function Hero() {
           className="mt-6 max-w-2xl text-center text-lg text-secondary-custom sm:text-xl"
           style={{ lineHeight: 1.6 }}
         >
-          Crio interfaces modernas, rápidas e intuitivas para empresas, startups e negócios digitais.
+          {t.hero.description}
         </motion.p>
 
         <motion.div
@@ -80,7 +82,7 @@ export function Hero() {
             href="#work"
             className="group inline-flex h-11 items-center gap-2 rounded-full bg-[var(--text)] px-6 text-sm font-medium text-[var(--bg)]"
           >
-            Projetos
+            {t.hero.projects}
             <ArrowRight
               className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
               strokeWidth={1.5}
@@ -91,7 +93,7 @@ export function Hero() {
             strength={0.25}
             className="group inline-flex h-11 items-center gap-2 rounded-full border border-custom px-6 text-sm font-medium transition-colors duration-200 hover:bg-[var(--card)]"
           >
-              Contato
+              {t.hero.contact}
             <ArrowUpRight
               className="h-4 w-4 text-secondary-custom transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               strokeWidth={1.5}
@@ -106,8 +108,8 @@ export function Hero() {
           variants={fadeUp}
           className="mt-12 flex flex-wrap items-center justify-center gap-3"
         >
-          {['React', 'Next.js', 'Typescript', 'Node.js'].map((t, i) => (
-            <span key={t} className="flex items-center gap-3">
+          {t.hero.technologies.map((technology, i) => (
+            <span key={technology} className="flex items-center gap-3">
               {i > 0 && <span className="text-secondary-custom">•</span>}
               <motion.span
                 initial={{ opacity: 0 }}
@@ -115,7 +117,7 @@ export function Hero() {
                 transition={{ delay: 0.7 + i * 0.08, duration: 0.5 }}
                 className="text-sm text-secondary-custom"
               >
-                {t}
+                {technology}
               </motion.span>
             </span>
           ))}
@@ -134,7 +136,7 @@ export function Hero() {
           className="flex flex-col items-center gap-2"
         >
           <span className="text-[10px] uppercase tracking-[0.2em] text-secondary-custom">
-            Scroll
+            {t.hero.scroll}
           </span>
           <div className="h-8 w-px bg-gradient-to-b from-[var(--border)] to-transparent" />
         </motion.div>

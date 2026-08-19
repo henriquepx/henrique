@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import { LanguageProvider } from '@/lib/i18n';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -12,7 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://henriquepinheiro.dev'),
   title: {
-    default: 'Henrique Pinheiro — Front-end Developer',
+    default: 'Henrique Pinheiro — Desenvolvedor Front-end',
     template: 'Henrique Pinheiro',
   },
   description:
@@ -73,14 +74,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <LanguageProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem={false}
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

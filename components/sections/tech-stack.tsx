@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { skillCategories, type Skill } from '@/lib/data';
 import { ScrollReveal } from '@/components/motion/scroll-reveal';
+import { useLanguage } from '@/lib/i18n';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -15,19 +16,21 @@ const FLOAT_BASES = [
 ];
 
 export function TechStack() {
+  const { t } = useLanguage();
+
   return (
-    <section className="py-24 sm:py-32">
+    <section id="skills" className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <ScrollReveal>
           <div className="mb-14 max-w-3xl">
             <span className="mb-4 block text-xs font-medium uppercase tracking-[0.2em] text-secondary-custom">
-              Stacks
+              {t.skills.eyebrow}
             </span>
 
             <h2 className="text-4xl font-semibold leading-[0.95] tracking-tightest sm:text-5xl lg:text-6xl">
-              Linguagens de programação &{' '}
+              {t.skills.title}
               <span className="text-secondary-custom">
-                ferramentas.
+                {t.skills.titleEmphasis}
               </span>
             </h2>
           </div>
@@ -51,7 +54,7 @@ export function TechStack() {
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-medium tracking-tightest">
-                  {cat.title}
+                  {t.skills.categories[cat.title] ?? cat.title}
                 </h3>
 
                 <span className="text-xs font-medium text-secondary-custom">
@@ -84,9 +87,7 @@ export function TechStack() {
             className="flex items-end lg:col-span-5"
           >
             <p className="text-sm leading-relaxed text-secondary-custom">
-              Cada tecnologia foi escolhida com propósito. Utilizo uma stack
-              moderna e eficiente para desenvolver produtos rápidos,
-              escaláveis e focados na melhor experiência do usuário.
+{t.skills.closing}
             </p>
           </motion.div>
         </div>

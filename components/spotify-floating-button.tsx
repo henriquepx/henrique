@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { SiSpotify } from "@icons-pack/react-simple-icons";
+import { useLanguage } from "@/lib/i18n";
 
 export function SpotifyFloatingButton() {
+  const { t } = useLanguage();
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -47,20 +49,19 @@ export function SpotifyFloatingButton() {
           <div className="pointer-events-none absolute bottom-0 left-16 w-72 rounded-2xl border border-white/10 bg-zinc-900/95 p-5 opacity-0 shadow-2xl backdrop-blur-xl transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-x-1 group-hover:opacity-100">
 
             <p className="text-[11px] uppercase tracking-[0.3em] text-zinc-500">
-              Currently Listening
+              {t.spotify.eyebrow}
             </p>
 
             <h3 className="mt-2 text-base font-semibold text-white">
-              Focus Flow
+              {t.spotify.title}
             </h3>
 
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              Music that keeps me focused while designing interfaces,
-              writing code and shipping products.
+              {t.spotify.description}
             </p>
 
             <div className="mt-4 flex items-center gap-2 text-sm font-medium text-[#1DB954]">
-              Open on Spotify
+              {t.spotify.action}
               <ExternalLink size={15} />
             </div>
           </div>

@@ -11,10 +11,12 @@ import { useEffect, useState, type MouseEvent } from 'react';
 import { ArrowUpRight, X } from 'lucide-react';
 import { projects, type Project } from '@/lib/data';
 import { ScrollReveal } from '@/components/motion/scroll-reveal';
+import { useLanguage } from '@/lib/i18n';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function SelectedWork() {
+  const { t } = useLanguage();
   const [hoveredProject, setHoveredProject] = useState<Project | null>(null);
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
@@ -79,16 +81,15 @@ export function SelectedWork() {
           <ScrollReveal className="mb-16 sm:mb-24">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="eyebrow mb-4">Trabalhos</p>
+                <p className="eyebrow mb-4">{t.work.eyebrow}</p>
 
                 <h2 className="text-4xl font-bold tracking-tightest sm:text-6xl">
-                  Projetos
+                  {t.work.title}
                 </h2>
               </div>
 
               <p className="max-w-xs text-sm leading-6 text-secondary-custom sm:text-right">
-                Uma seleção de projetos desenvolvidos com foco em experiência,
-                funcionalidade e detalhes.
+                {t.work.description}
               </p>
             </div>
           </ScrollReveal>
@@ -139,7 +140,7 @@ export function SelectedWork() {
               <motion.img
                 key={hoveredProject.id}
                 src={hoveredProject.image}
-                alt={`${hoveredProject.name} preview`}
+                alt={`${hoveredProject.name} ${t.work.previewAlt}`}
                 initial={{
                   opacity: 0,
                   scale: 1.05,
@@ -155,7 +156,6 @@ export function SelectedWork() {
                 className="h-full w-full object-cover"
               />
 
-              {/* Subtle overlay */}
               <div className="absolute inset-0 bg-black/5" />
             </motion.div>
           )}
@@ -189,6 +189,9 @@ function ProjectRow({
   onLeave: () => void;
   onClick: () => void;
 }) {
+  const { t } = useLanguage();
+  const copy = t.projects[project.id];
+
   return (
     <motion.button
       type="button"
@@ -243,13 +246,13 @@ function ProjectRow({
             </motion.h3>
 
             <p className="mt-2 max-w-lg text-sm leading-6 text-secondary-custom sm:hidden">
-              {project.description}
+              {copy.description}
             </p>
           </div>
 
           <div className="hidden sm:block">
             <p className="text-sm text-secondary-custom">
-              {project.category}
+              {copy.category}
             </p>
 
             <p className="mt-1 text-xs text-secondary-custom/60">
@@ -281,7 +284,7 @@ function ProjectRow({
 
         <div className="mt-5 flex items-center gap-3 sm:hidden">
           <span className="text-xs text-secondary-custom">
-            {project.category}
+            {copy.category}
           </span>
 
           <span className="h-1 w-1 rounded-full bg-[var(--border)]" />
@@ -319,6 +322,9 @@ function ProjectModal({
   project: Project;
   onClose: () => void;
 }) {
+  const { t } = useLanguage();
+  const copy = t.projects[project.id];
+
   return (
     <motion.div
       initial={{
@@ -336,7 +342,7 @@ function ProjectModal({
       className="fixed inset-0 z-[100] overflow-y-auto"
       role="dialog"
       aria-modal="true"
-      aria-label={`${project.name} — detalhes do projeto`}
+      aria-label={`${project.name} — ${t.work.dialogLabel}`}
       onMouseDown={(e) => {
         if (e.target === e.currentTarget) {
           onClose();
@@ -384,7 +390,7 @@ function ProjectModal({
        <button
             type="button"
             onClick={onClose}
-            aria-label="Fechar projeto"
+            aria-label={t.work.close}
             className="absolute right-5 top-5 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/20 text-white backdrop-blur-md transition-transform duration-200 hover:scale-105"
           >
             <X
@@ -396,7 +402,7 @@ function ProjectModal({
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
             <motion.img
               src={project.image}
-              alt={`${project.name} preview`}
+              alt={`${project.name} ${t.work.previewAlt}`}
               initial={{
                 scale: 1.05,
               }}
@@ -417,7 +423,7 @@ function ProjectModal({
 
             <div>
               <div className="mb-5 flex items-center gap-3 text-xs text-secondary-custom">
-                <span>{project.category}</span>
+                <span>{copy.category}</span>
 
                 <span className="h-1 w-1 rounded-full bg-[var(--border)]" />
 
@@ -428,14 +434,14 @@ function ProjectModal({
                 {project.name}
               </h2>
 
-              {project.accent && (
+              {copy.accent && (
                 <p className="mt-6 max-w-2xl border-l border-custom pl-5 text-lg font-medium leading-relaxed text-secondary-custom">
-                  {project.accent}
+                  {copy.accent}
                 </p>
               )}
 
               <p className="mt-6 max-w-2xl text-[15px] leading-7 text-secondary-custom">
-                {project.description}
+                {copy.description}
               </p>
             </div>
 
@@ -443,7 +449,7 @@ function ProjectModal({
 
               <div>
                 <p className="mb-3 text-xs font-medium uppercase tracking-wider text-secondary-custom">
-                  Tecnologias
+                  {t.work.technologies}
                 </p>
 
                 <div className="flex flex-wrap gap-2">
@@ -465,9 +471,8 @@ function ProjectModal({
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 text-sm font-medium"
                 >
-                  Visitar projeto
-
-                  <ArrowUpRight
+                  {t.work.visit}
+<ArrowUpRight
                     className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                     strokeWidth={1.5}
                   />

@@ -4,23 +4,15 @@ import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useMounted } from '@/hooks/use-mounted';
+import { useLanguage } from '@/lib/i18n';
 
 type Word = {
   text: string;
   emphasis?: boolean;
 };
 
-const WORDS: Word[] = [
-  {
-    text: 'Acredito que um bom produto digital vai além de um visual bonito. Busco desenvolver experiências ',
-  },
-  {
-    text: 'intuitivas, rápidas e bem construídas.',
-    emphasis: true,
-  },
-];
-
 export function About() {
+  const { t } = useLanguage();
   const mounted = useMounted();
   const ref = useRef<HTMLElement>(null);
 
@@ -40,7 +32,7 @@ export function About() {
           transition={{ duration: 0.5 }}
           className="eyebrow mb-10"
         >
-          Sobre
+          {t.about.eyebrow}
         </motion.p>
 
         {/* Profile */}
@@ -70,7 +62,7 @@ export function About() {
             </h2>
 
             <p className="mt-1 text-sm text-muted-foreground">
-              Desenvolvedor de produtos digitais
+              {t.about.role}
             </p>
           </div>
         </motion.div>
@@ -84,26 +76,22 @@ export function About() {
           className="mb-12 max-w-3xl"
         >
           <p className="text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-            Graduado em Análise e Desenvolvimento de Sistemas, desenvolvo
-            produtos digitais com foco em clareza, performance e experiência.
-            Transformo ideias em soluções funcionais, modernas e pensadas para
-            pessoas.
+            {t.about.bio}
           </p>
         </motion.div>
 
         {/* Main statement */}
         <p className="flex flex-wrap text-2xl font-medium leading-[1.4] tracking-tightest sm:text-4xl sm:leading-[1.3]">
-          {WORDS.map((word, i) => (
-            <WordSpan
-              key={i}
-              word={word}
-              progress={scrollYProgress}
-              range={[
-                i / WORDS.length,
-                (i + 1) / WORDS.length,
-              ]}
-            />
-          ))}
+          <WordSpan
+            word={{ text: t.about.statement }}
+            progress={scrollYProgress}
+            range={[0, 0.5]}
+          />
+          <WordSpan
+            word={{ text: t.about.statementEmphasis, emphasis: true }}
+            progress={scrollYProgress}
+            range={[0.5, 1]}
+          />
         </p>
       </div>
     </section>
