@@ -166,12 +166,12 @@ const translations: Record<Locale, Translation> = {
         accent:
           'Site moderno e responsivo para nutricionista, destacando serviços e facilitando contato com clientes.',
       },
-      'eduardo-links': {
+      'bernardo-links': {
         category: 'Links-in-bio',
         description:
-          'Estrutura de links-in-bio moderna e responsiva para Eduardo Bonfim, destacando sua identidade visual e seus links e facilitando o contato com potenciais clientes.',
+          'Estrutura de links-in-bio moderna e responsiva para Bernardo Bonfim, destacando sua identidade visual e seus links e facilitando o contato com potenciais clientes.',
         accent:
-          'Landing page moderna e responsiva para Eduardo Bonfim, destacando seus links e facilitando o contato com potenciais clientes.',
+          'Landing page moderna e responsiva para Bernardo Bonfim, destacando seus links e facilitando o contato com potenciais clientes.',
       },
       financialtools: {
         category: 'Future SaaS',
