@@ -76,7 +76,6 @@ export function SelectedWork() {
       >
         <div className="mx-auto max-w-6xl">
 
-          {/* Header */}
           <ScrollReveal className="mb-16 sm:mb-24">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
@@ -94,7 +93,6 @@ export function SelectedWork() {
             </div>
           </ScrollReveal>
 
-          {/* Projects */}
           <div className="relative border-t border-custom">
             {projects.map((project, index) => (
               <ProjectRow
@@ -110,7 +108,6 @@ export function SelectedWork() {
           </div>
         </div>
 
-        {/* Floating hover preview */}
         <AnimatePresence>
           {hoveredProject && !activeProject && (
             <motion.div
@@ -165,7 +162,6 @@ export function SelectedWork() {
         </AnimatePresence>
       </section>
 
-      {/* Project Modal */}
       <AnimatePresence>
         {activeProject && (
           <ProjectModal
@@ -220,10 +216,8 @@ function ProjectRow({
     >
       <div className="relative py-8 sm:py-10 lg:py-12">
 
-        {/* Main row */}
         <div className="grid grid-cols-[50px_1fr_auto] items-center gap-6 sm:grid-cols-[70px_1fr_180px_auto] lg:grid-cols-[80px_1fr_200px_80px]">
 
-          {/* Number */}
           <span
             className={`text-xs font-medium transition-colors duration-300 ${
               isActive
@@ -234,7 +228,6 @@ function ProjectRow({
             {String(index + 1).padStart(2, '0')}
           </span>
 
-          {/* Project name */}
           <div className="min-w-0">
             <motion.h3
               animate={{
@@ -249,13 +242,11 @@ function ProjectRow({
               {project.name}
             </motion.h3>
 
-            {/* Mobile description */}
             <p className="mt-2 max-w-lg text-sm leading-6 text-secondary-custom sm:hidden">
               {project.description}
             </p>
           </div>
 
-          {/* Meta */}
           <div className="hidden sm:block">
             <p className="text-sm text-secondary-custom">
               {project.category}
@@ -266,7 +257,6 @@ function ProjectRow({
             </p>
           </div>
 
-          {/* Arrow */}
           <motion.div
             animate={{
               x: isActive ? 4 : 0,
@@ -289,7 +279,6 @@ function ProjectRow({
           </motion.div>
         </div>
 
-        {/* Mobile metadata */}
         <div className="mt-5 flex items-center gap-3 sm:hidden">
           <span className="text-xs text-secondary-custom">
             {project.category}
@@ -302,7 +291,6 @@ function ProjectRow({
           </span>
         </div>
 
-        {/* Hover underline */}
         <motion.div
           initial={{
             scaleX: 0,
@@ -355,7 +343,6 @@ function ProjectModal({
         }
       }}
     >
-      {/* Backdrop */}
       <motion.div
         initial={{
           opacity: 0,
@@ -369,7 +356,6 @@ function ProjectModal({
         className="fixed inset-0 bg-black/60 backdrop-blur-md"
       />
 
-      {/* Modal wrapper */}
       <div className="relative flex min-h-full items-center justify-center p-4 sm:p-8">
         <motion.div
           initial={{
@@ -395,8 +381,7 @@ function ProjectModal({
           onMouseDown={(e) => e.stopPropagation()}
         >
 
-          {/* Close */}
-          <button
+       <button
             type="button"
             onClick={onClose}
             aria-label="Fechar projeto"
@@ -408,7 +393,6 @@ function ProjectModal({
             />
           </button>
 
-          {/* Project image */}
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
             <motion.img
               src={project.image}
@@ -429,10 +413,8 @@ function ProjectModal({
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </div>
 
-          {/* Content */}
           <div className="grid gap-10 p-6 sm:p-10 lg:grid-cols-[1fr_260px] lg:p-12">
 
-            {/* Main */}
             <div>
               <div className="mb-5 flex items-center gap-3 text-xs text-secondary-custom">
                 <span>{project.category}</span>
@@ -457,10 +439,8 @@ function ProjectModal({
               </p>
             </div>
 
-            {/* Sidebar */}
             <div className="flex flex-col gap-8">
 
-              {/* Technologies */}
               <div>
                 <p className="mb-3 text-xs font-medium uppercase tracking-wider text-secondary-custom">
                   Tecnologias
@@ -478,7 +458,6 @@ function ProjectModal({
                 </div>
               </div>
 
-              {/* Link */}
               <div>
                 <a
                   href={project.liveUrl}

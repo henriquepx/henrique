@@ -13,16 +13,72 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'Nutricionista',
-    name: 'Landing page para Nutricionista',
-    category: 'Landing page',
+    id: 'derek-lp',
+    name: 'Derek Gonçalves',
+    category: 'Landing page | Harmonização Facial',
+    description:
+      'Uma landing page moderna e responsiva para o profissional Derek Gonçalves, destacando seus serviços de harmonização facial e facilitando o contato com potenciais clientes.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: 'https://drderek.vercel.app',
+    image:
+      '/derek.png',
+    accent: 'Site moderno com animações suaves, destacando serviços de harmonização facial e facilitando o contato com clientes.',
+    layout: 'fullwidth',
+    year: '2026',
+  },
+  {
+    id: 'nutricionista',
+    name: 'Bárbara Gomes',
+    category: 'Landing page | Nutricionista',
     description:
       'Uma landing page para nutricionista, com design moderno e responsivo, destacando os serviços oferecidos e facilitando o contato com potenciais clientes.',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
     liveUrl: 'https://barbaranutri.vercel.app',
     image:
       '/barbaraproject.png',
-    accent: 'A wellness platform for clinical nutrition.',
+    accent: 'Site moderno e responsivo para nutricionista, destacando serviços e facilitando contato com clientes.',
+    layout: 'fullwidth',
+    year: '2026',
+  },
+  {
+    id: 'eduardo-links',
+    name: 'Eduardo Bonfim',
+    category: 'Links-in-bio',
+    description:
+      'Estrutura de links-in-bio moderna e responsiva para Eduardo Bonfim, destacando sua identidade visual e seus links e facilitando o contato com potenciais clientes.',
+    technologies: ['React', 'Tailwind CSS', 'Vercel'],
+    liveUrl: 'https://bernardobonfim.vercel.app',
+    image:
+      '/eduardo.png',
+    accent: 'Landing page moderna e responsiva para Eduardo Bonfim, destacando seus links e facilitando o contato com potenciais clientes.',
+    layout: 'fullwidth',
+    year: '2026',
+  },
+  {
+    id: 'financialtools',
+    name: 'Quantia',
+    category: 'Future SaaS',
+    description:
+      'Uma plataforma com ferramentas financeiras, incluindo calculadoras de investimento, simuladores de empréstimos e recursos educacionais para ajudar os usuários a tomar decisões financeiras informadas.',
+    technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
+    liveUrl: 'https://quantia-ten.vercel.app/',
+    image:
+      '/quantia.png',
+    accent: 'Plataforma de ferramentas financeiras.',
+    layout: 'fullwidth',
+    year: '2026',
+  },
+  {
+    id: 'eva',
+    name: 'Eva Xavier',
+    category: 'Advocacia',
+    description:
+      'Landing page com uma identidade sofisticada e moderna para Eva Xavier, destacando seus serviços jurídicos e facilitando o contato com potenciais clientes.',
+    technologies: ['React', 'Typescript', 'Tailwind CSS', 'Vercel'],
+    liveUrl: 'https://evaxavieradv.vercel.app',
+    image:
+      '/eva.png',
+    accent: 'Landing page moderna e minimalista para Eva Xavier, destacando seus serviços jurídicos e facilitando o contato com potenciais clientes.',
     layout: 'fullwidth',
     year: '2026',
   },
@@ -39,20 +95,6 @@ export const projects: Project[] = [
     accent: 'Uma ferramenta leve, organizada e responsiva que ajuda desenvolvedores a encontrar rapidamente o comando certo, entender sua função e continuar programando sem perder tempo.',
     layout: 'portrait',
     year: '2024',
-  },
-  {
-    id: 'financialtools',
-    name: 'Quantia',
-    category: 'Future SaaS',
-    description:
-      'Uma plataforma com ferramentas financeiras, incluindo calculadoras de investimento, simuladores de empréstimos e recursos educacionais para ajudar os usuários a tomar decisões financeiras informadas.',
-    technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
-    liveUrl: 'https://quantia-ten.vercel.app/',
-    image:
-      '/quantia.png',
-    accent: 'Plataforma de ferramentas financeiras.',
-    layout: 'fullwidth',
-    year: '2026',
   }
 ];
 
